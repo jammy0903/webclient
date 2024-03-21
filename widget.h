@@ -20,13 +20,10 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
-    //QTcpSocket Socket_;
+QTcpSocket Socket_;
+QSslSocket SSLSocket_;
 
-    // here we code start
-    //widget class's memeber varient
-
-    QSslSocket Socket_;
-    //QUdpSocket Socket_;
+bool SSL=false;
 
 public slots:
     //socket connect body fuction
@@ -43,9 +40,9 @@ private slots:
 
     void on_pbSend_clicked();
 
-    void on_pb_2_clicked();
-
     void on_pb_Clear_clicked();
+
+    void on_SSL_select_checkbox_toggled(bool checked);
 
 private:
     Ui::Widget *ui;

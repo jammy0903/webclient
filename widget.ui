@@ -13,108 +13,95 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="QWidget" name="">
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <item>
-     <widget class="QLineEdit" name="le_Host">
-      <property name="text">
-       <string>www.naver.com</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="le_Port">
-      <property name="text">
-       <string>80</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QPlainTextEdit" name="pteMessage">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>78</y>
-     <width>256</width>
-     <height>192</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="QPlainTextEdit" name="pteSend">
-      <property name="plainText">
-       <string>GET / HTTP/1.1
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetFixedSize</enum>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="SSL_select_checkbox">
+         <property name="text">
+          <string>SSL</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_connect">
+         <property name="text">
+          <string>connect</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_disconect">
+         <property name="text">
+          <string>Disconnet</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_Clear">
+         <property name="text">
+          <string>clear</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLineEdit" name="le_Host">
+       <property name="text">
+        <string>www.naver.com</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="le_Port">
+       <property name="text">
+        <string>80</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPlainTextEdit" name="pteMessage"/>
+   </item>
+   <item row="4" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPlainTextEdit" name="pteSend">
+       <property name="plainText">
+        <string>GET / HTTP/1.1
 Host: www.naver.com
 
 </string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pbSend">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>Send</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>40</y>
-     <width>81</width>
-     <height>221</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <property name="sizeConstraint">
-     <enum>QLayout::SetFixedSize</enum>
-    </property>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QPushButton" name="pb_connect">
-        <property name="text">
-         <string>connect</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pb_disconect">
-        <property name="text">
-         <string>Disconnet</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pb_ssl">
-        <property name="text">
-         <string>SSL</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pb_Clear">
-      <property name="text">
-       <string>clear</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbSend">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Send</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
